@@ -40,7 +40,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head><meta name="google-site-verification" content="qV1pK_kGsTcXeT6mq5dbernvUwfji-7BgAmCLdr6m7w" /></head>
+      <head><meta name="google-site-verification" content="qV1pK_kGsTcXeT6mq5dbernvUwfji-7BgAmCLdr6m7w" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-1H0FHP2GW2"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1H0FHP2GW2');
+            `,
+          }}
+        /></head>
       <body className={inter.className}>
         <NavBar/>
         {children}
